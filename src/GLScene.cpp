@@ -116,6 +116,12 @@ void MouseGL(int button, int state, int x, int y) {
     } else if (state == GLUT_UP) {
       is_dragging = false;
     }
+  } else if (button == 3) { // Scroll up
+    scal += 0.1f;
+    glutPostRedisplay();
+  } else if (button == 4) { // Scroll down
+    scal -= 0.1f;
+    glutPostRedisplay();
   }
 }
 
