@@ -183,6 +183,13 @@ src/CMakeFiles/Conway.dir/GLScene.cpp.o: src/GLScene.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   include/Life3d.h \
   include/World3d.h \
+  menu/ImGui/imgui.h \
+  menu/ImGui/imconfig.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/assert.h \
+  menu/ImGui/backends/imgui_impl_glut.h \
   /usr/include/c++/11/ctime \
   /usr/include/GL/glut.h \
   /usr/include/GL/freeglut_std.h \
@@ -1092,6 +1099,13 @@ src/CMakeFiles/Conway.dir/main.cpp.o: src/main.cpp \
   include/GLScene.h \
   include/Life3d.h \
   include/World3d.h \
+  menu/ImGui/imgui.h \
+  menu/ImGui/imconfig.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/assert.h \
+  menu/ImGui/backends/imgui_impl_glut.h \
   /usr/include/c++/11/ctime \
   /usr/include/GL/glut.h \
   /usr/include/GL/freeglut_std.h \
@@ -1110,6 +1124,10 @@ src/Life3d.cpp:
 
 /usr/include/GL/glut.h:
 
+/usr/include/string.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
@@ -1121,6 +1139,8 @@ src/Life.cpp:
 /usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+menu/ImGui/imconfig.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
@@ -1147,6 +1167,8 @@ src/Life.cpp:
 /usr/include/c++/11/bits/charconv.h:
 
 src/World.cpp:
+
+menu/ImGui/imgui.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -1223,6 +1245,8 @@ src/main.cpp:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/11/bits/range_access.h:
+
+/usr/include/assert.h:
 
 /usr/include/c++/11/cstdlib:
 
@@ -1452,6 +1476,8 @@ include/Life.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
+menu/ImGui/backends/imgui_impl_glut.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -1463,6 +1489,8 @@ include/Life.h:
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

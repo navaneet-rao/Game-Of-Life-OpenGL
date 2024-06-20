@@ -1,11 +1,15 @@
 #include "Life.h"
 #include "Life3d.h"
 
+#include "imgui.h"
+#include "imgui_impl_glut.h"
+
 #include <ctime>
 
 #include <GL/glut.h>
 
 using namespace life3;
+using namespace ImGui;
 
 #ifndef GLSCENE_H
 #define GLSCENE_H

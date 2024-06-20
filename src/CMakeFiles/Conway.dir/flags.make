@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nate/Code/opengl/GameOfLife/include
+CXX_INCLUDES = -I/home/nate/Code/opengl/GameOfLife/include -I/home/nate/Code/opengl/GameOfLife/menu/ImGui -I/home/nate/Code/opengl/GameOfLife/menu/ImGui/backends
 
 CXX_FLAGS = -Wall -std=gnu++11
 

@@ -150,6 +150,11 @@ src/CMakeFiles/Conway.dir/GLScene.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/nate/Code/opengl/GameOfLife/include/Life3d.h \
  /home/nate/Code/opengl/GameOfLife/include/World3d.h \
+ /home/nate/Code/opengl/GameOfLife/menu/ImGui/imgui.h \
+ /home/nate/Code/opengl/GameOfLife/menu/ImGui/imconfig.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/assert.h \
+ /home/nate/Code/opengl/GameOfLife/menu/ImGui/backends/imgui_impl_glut.h \
  /usr/include/c++/11/ctime /usr/include/GL/glut.h \
  /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
