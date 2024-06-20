@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall CMakeFiles/Conway.dir/GLScene.cpp.o CMakeFiles/Conway.dir/Life.cpp.o CMakeFiles/Conway.dir/Life3d.cpp.o CMakeFiles/Conway.dir/World.cpp.o CMakeFiles/Conway.dir/World3d.cpp.o CMakeFiles/Conway.dir/main.cpp.o -o Conway  /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libglut.so -lGLU /usr/lib/x86_64-linux-gnu/libXi.so 
