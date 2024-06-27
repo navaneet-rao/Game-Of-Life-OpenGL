@@ -261,7 +261,6 @@ void ReshapeGL(int w, int h) {
   glLoadIdentity();
   gluPerspective(60.0, (GLdouble)window_width / (GLdouble)window_height, 0.1,
                  100.0);
-
   // render();
   glutPostRedisplay();
 }

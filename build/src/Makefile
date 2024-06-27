@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/luke/code/Game-Of-Life-OpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luke/code/Game-Of-Life-OpenGL
+CMAKE_BINARY_DIR = /home/luke/code/Game-Of-Life-OpenGL/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(CMAKE_COMMAND) -E cmake_progress_start /home/luke/code/Game-Of-Life-OpenGL/CMakeFiles /home/luke/code/Game-Of-Life-OpenGL/src//CMakeFiles/progress.marks
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luke/code/Game-Of-Life-OpenGL/CMakeFiles 0
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/luke/code/Game-Of-Life-OpenGL/build/CMakeFiles /home/luke/code/Game-Of-Life-OpenGL/build/src//CMakeFiles/progress.marks
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luke/code/Game-Of-Life-OpenGL/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/Conway.dir/rule:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Conway.dir/rule
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Conway.dir/rule
 .PHONY : src/CMakeFiles/Conway.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ Conway: src/CMakeFiles/Conway.dir/rule
 
 # fast build rule for target.
 Conway/fast:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/build
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/build
 .PHONY : Conway/fast
 
 GLScene.o: GLScene.cpp.o
@@ -135,7 +135,7 @@ GLScene.o: GLScene.cpp.o
 
 # target to build an object file
 GLScene.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.o
 .PHONY : GLScene.cpp.o
 
 GLScene.i: GLScene.cpp.i
@@ -143,7 +143,7 @@ GLScene.i: GLScene.cpp.i
 
 # target to preprocess a source file
 GLScene.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.i
 .PHONY : GLScene.cpp.i
 
 GLScene.s: GLScene.cpp.s
@@ -151,7 +151,7 @@ GLScene.s: GLScene.cpp.s
 
 # target to generate assembly for a file
 GLScene.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/GLScene.cpp.s
 .PHONY : GLScene.cpp.s
 
 Life.o: Life.cpp.o
@@ -159,7 +159,7 @@ Life.o: Life.cpp.o
 
 # target to build an object file
 Life.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.o
 .PHONY : Life.cpp.o
 
 Life.i: Life.cpp.i
@@ -167,7 +167,7 @@ Life.i: Life.cpp.i
 
 # target to preprocess a source file
 Life.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.i
 .PHONY : Life.cpp.i
 
 Life.s: Life.cpp.s
@@ -175,7 +175,7 @@ Life.s: Life.cpp.s
 
 # target to generate assembly for a file
 Life.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life.cpp.s
 .PHONY : Life.cpp.s
 
 Life3d.o: Life3d.cpp.o
@@ -183,7 +183,7 @@ Life3d.o: Life3d.cpp.o
 
 # target to build an object file
 Life3d.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.o
 .PHONY : Life3d.cpp.o
 
 Life3d.i: Life3d.cpp.i
@@ -191,7 +191,7 @@ Life3d.i: Life3d.cpp.i
 
 # target to preprocess a source file
 Life3d.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.i
 .PHONY : Life3d.cpp.i
 
 Life3d.s: Life3d.cpp.s
@@ -199,7 +199,7 @@ Life3d.s: Life3d.cpp.s
 
 # target to generate assembly for a file
 Life3d.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/Life3d.cpp.s
 .PHONY : Life3d.cpp.s
 
 World.o: World.cpp.o
@@ -207,7 +207,7 @@ World.o: World.cpp.o
 
 # target to build an object file
 World.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.o
 .PHONY : World.cpp.o
 
 World.i: World.cpp.i
@@ -215,7 +215,7 @@ World.i: World.cpp.i
 
 # target to preprocess a source file
 World.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.i
 .PHONY : World.cpp.i
 
 World.s: World.cpp.s
@@ -223,7 +223,7 @@ World.s: World.cpp.s
 
 # target to generate assembly for a file
 World.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World.cpp.s
 .PHONY : World.cpp.s
 
 World3d.o: World3d.cpp.o
@@ -231,7 +231,7 @@ World3d.o: World3d.cpp.o
 
 # target to build an object file
 World3d.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.o
 .PHONY : World3d.cpp.o
 
 World3d.i: World3d.cpp.i
@@ -239,7 +239,7 @@ World3d.i: World3d.cpp.i
 
 # target to preprocess a source file
 World3d.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.i
 .PHONY : World3d.cpp.i
 
 World3d.s: World3d.cpp.s
@@ -247,7 +247,7 @@ World3d.s: World3d.cpp.s
 
 # target to generate assembly for a file
 World3d.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/World3d.cpp.s
 .PHONY : World3d.cpp.s
 
 main.o: main.cpp.o
@@ -255,7 +255,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.o
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -263,7 +263,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.i
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -271,7 +271,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.s
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Conway.dir/build.make src/CMakeFiles/Conway.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -312,6 +312,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/luke/code/Game-Of-Life-OpenGL && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/luke/code/Game-Of-Life-OpenGL/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

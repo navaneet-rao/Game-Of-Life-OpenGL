@@ -1,8 +1,8 @@
 src/CMakeFiles/Conway.dir/Life3d.cpp.o: \
- /home/nate/Code/opengl/GameOfLife/src/Life3d.cpp \
+ /home/luke/code/Game-Of-Life-OpenGL/src/Life3d.cpp \
  /usr/include/stdc-predef.h \
- /home/nate/Code/opengl/GameOfLife/include/Life3d.h \
- /home/nate/Code/opengl/GameOfLife/include/World3d.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/Life3d.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/World3d.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
