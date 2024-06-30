@@ -30,6 +30,7 @@ void ReshapeGL(int w, int h);
 void MouseGL(int button, int state, int x, int y);
 void MouseMotionGL(int x, int y);
 
+void MainMenuBar();
 void DisplayImGui();
 
 void render();

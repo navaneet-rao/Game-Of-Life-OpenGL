@@ -2121,7 +2121,7 @@ src/CMakeFiles/Conway.dir/main.cpp.o: ../src/main.cpp \
   ../include/GLScene.h \
   ../include/Life3d.h \
   ../include/World3d.h \
-  ../include/SettingsMenu.h \
+  /usr/include/c++/11/ctime \
   /usr/include/GL/gl.h \
   /usr/include/GL/glext.h \
   /usr/include/KHR/khrplatform.h \
@@ -2136,8 +2136,7 @@ src/CMakeFiles/Conway.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/strings.h \
   /usr/include/assert.h \
   ../include/imgui_impl_glut.h \
-  ../include/imgui_impl_opengl3.h \
-  /usr/include/c++/11/ctime
+  ../include/imgui_impl_opengl3.h
 
 
 ../src/main.cpp:
@@ -2419,8 +2418,6 @@ src/CMakeFiles/Conway.dir/main.cpp.o: ../src/main.cpp \
 ../include/Life.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
-
-../include/SettingsMenu.h:
 
 /usr/include/c++/11/ctime:
 

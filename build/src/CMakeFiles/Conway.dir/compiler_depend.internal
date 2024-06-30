@@ -2135,7 +2135,7 @@ src/CMakeFiles/Conway.dir/main.cpp.o
  /home/luke/code/Game-Of-Life-OpenGL/include/GLScene.h
  /home/luke/code/Game-Of-Life-OpenGL/include/Life3d.h
  /home/luke/code/Game-Of-Life-OpenGL/include/World3d.h
- /home/luke/code/Game-Of-Life-OpenGL/include/SettingsMenu.h
+ /usr/include/c++/11/ctime
  /usr/include/GL/gl.h
  /usr/include/GL/glext.h
  /usr/include/KHR/khrplatform.h
@@ -2151,5 +2151,4 @@ src/CMakeFiles/Conway.dir/main.cpp.o
  /usr/include/assert.h
  /home/luke/code/Game-Of-Life-OpenGL/include/imgui_impl_glut.h
  /home/luke/code/Game-Of-Life-OpenGL/include/imgui_impl_opengl3.h
- /usr/include/c++/11/ctime
 
