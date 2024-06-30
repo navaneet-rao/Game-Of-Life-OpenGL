@@ -150,10 +150,10 @@ src/CMakeFiles/Conway.dir/GLScene.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/luke/code/Game-Of-Life-OpenGL/include/Life3d.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/World3d.h \
- /usr/include/c++/11/ctime /usr/include/GL/glut.h \
- /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
- /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h /usr/include/c++/11/stdlib.h \
+ /usr/include/c++/11/ctime /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/KHR/khrplatform.h /usr/include/GL/glut.h \
+ /usr/include/GL/freeglut_std.h /usr/include/GL/glu.h \
+ /usr/include/c++/11/stdlib.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/imgui.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h /usr/include/string.h \

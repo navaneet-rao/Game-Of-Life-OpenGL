@@ -9,8 +9,6 @@ set(CMAKE_CXX_FLAGS "-Wall")
 include_directories(
     ${Conway_SOURCE_DIR}/include      # Assuming include directory is in the root
     ${GLUT_INCLUDE_DIRS}              # Include GLUT directories if necessary
-    ${PROJECT_SOURCE_DIR}/menu/ImGui  # Include ImGui headers from the menu folder
-    ${PROJECT_SOURCE_DIR}/menu/ImGui/backends  # Include ImGui headers from the menu folder
 )
 
 # Find required packages

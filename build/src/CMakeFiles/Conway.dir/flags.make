@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/luke/code/Game-Of-Life-OpenGL/include -I/home/luke/code/Game-Of-Life-OpenGL/menu/ImGui -I/home/luke/code/Game-Of-Life-OpenGL/menu/ImGui/backends
+CXX_INCLUDES = -I/home/luke/code/Game-Of-Life-OpenGL/include
 
 CXX_FLAGS = -Wall -std=gnu++11
 

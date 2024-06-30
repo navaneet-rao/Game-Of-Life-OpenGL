@@ -25,6 +25,10 @@ int time_e = clock();
 int last_mouse_x, last_mouse_y;
 bool is_dragging = false;
 
+float bg_color[4] = {0.156f, 0.172f, 0.203f, 1.00f}; // Default background color
+float ob_color[4] = {(169.0f / 255.0f), (234.0f / 255.0f), (123.0f / 255.0f),
+                     1.00f}; // Default background color
+
 Scene g_current = scene1;
 
 void GLScene(int argc, char *argv[]) { GLScene(900, 900, argc, argv); }
@@ -44,7 +48,6 @@ void GLScene(int x, int y, int argc, char *argv[]) {
 
   glutInitWindowPosition(30, 30);
   glutInitWindowSize(window_width, window_height);
-
   window_width = glutGet(GLUT_SCREEN_WIDTH);
   window_height = glutGet(GLUT_SCREEN_HEIGHT);
 
@@ -68,8 +71,10 @@ void GLScene(int x, int y, int argc, char *argv[]) {
   ImGui_ImplOpenGL3_Init();
   ImGui_ImplGLUT_Init();
 
-  glClearColor(0.156f, 0.172f, 0.203f, 1.00f); // BackGround Colour
+  // glClearColor(0.156f, 0.172f, 0.203f, 1.00f); // BackGround Colour
   // glClearColor(1.00f, 1.00f, 1.00f, 1.00f);
+  glClearColor(bg_color[0], bg_color[1], bg_color[2],
+               bg_color[3]); // BackGround Colour
   glClearDepth(1.0f);
   glShadeModel(GL_SMOOTH);
 }
@@ -114,6 +119,7 @@ void newlife3d() {
 }
 
 void DisplayGL() {
+  glClearColor(bg_color[0], bg_color[1], bg_color[2], bg_color[3]);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   ImGuiIO &io = ImGui::GetIO();
@@ -130,9 +136,7 @@ void DisplayGL() {
     render3d();
   }
 
-  ImGui::Begin("My Window");
-  ImGui::Text("Hello World");
-  ImGui::End();
+  DisplayImGui();
 
   ImGui::Render();
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -140,6 +144,144 @@ void DisplayGL() {
   glutSwapBuffers();
   glutPostRedisplay();
 }
+
+void DisplayImGui() {
+  ImGui::Begin("Control Panel");
+
+  ImGui::Text("Simulation Controls");
+
+  if (ImGui::Button(sim ? "Pause" : "Play")) {
+    sim = !sim;
+  }
+
+  if (ImGui::Button("Reset 2D Life")) {
+    newLife();
+  }
+
+  if (ImGui::Button("Reset 3D Life")) {
+    newlife3d();
+  }
+
+  ImGui::Checkbox("Rotate 3D", &b_rot);
+
+  ImGui::Separator();
+
+  ImGui::Text("View Controls");
+
+  if (ImGui::Button("Switch Scene")) {
+    if (g_current == scene1) {
+      glEnable(GL_DEPTH_TEST);
+      glEnable(GL_LIGHTING);
+      glEnable(GL_LIGHT0);
+      g_current = scene2;
+    } else if (g_current == scene2) {
+      glDisable(GL_DEPTH_TEST);
+      glDisable(GL_LIGHTING);
+      glDisable(GL_LIGHT0);
+      g_current = scene1;
+    }
+  }
+
+  ImGui::SliderFloat("Zoom", &scal, -10.0f, 10.0f);
+  ImGui::SliderFloat("X Offset", &x_offset, -5.0f, 5.0f);
+  ImGui::SliderFloat("Y Offset", &y_offset, -5.0f, 5.0f);
+
+  ImGui::Separator();
+
+  ImGui::Text("3D Rotation");
+  ImGui::SliderFloat("Rotation X", &rot_x, 0.0f, 1.0f);
+  ImGui::SliderFloat("Rotation Y", &rot_y, 0.0f, 1.0f);
+  ImGui::SliderFloat("Rotation Z", &rot_z, 0.0f, 1.0f);
+  ImGui::SliderFloat("Rotation Angle", &rot_angle, 0.0f, 360.0f);
+
+  ImGui::Separator();
+
+  ImGui::Text("Other Settings");
+  ImGui::Checkbox("Shading", &shade);
+
+  ImGui::Separator();
+
+  ImGui::Text("Grid Size");
+  if (ImGui::Button("200")) {
+    size = 200;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("300")) {
+    size = 300;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("400")) {
+    size = 400;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("500")) {
+    size = 500;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("600")) {
+    size = 600;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("700")) {
+    size = 700;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("800")) {
+    size = 800;
+    newLife();
+    newlife3d();
+  }
+  ImGui::SameLine();
+  if (ImGui::Button("900")) {
+    size = 900;
+    newLife();
+    newlife3d();
+  }
+
+  ImGui::Separator();
+
+  ImGui::Text("Background Color");
+  ImGui::ColorEdit4("Color", bg_color);
+
+  ImGui::Separator();
+
+  if (ImGui::Button("Reset All")) {
+    size = 500;
+    scal = 0.0f;
+    x_offset = 0.0f;
+    y_offset = 0.0f;
+    rot_x = 0.1f;
+    rot_y = 0.7f;
+    rot_z = 0.3f;
+    rot_angle = 0.1f;
+    b_rot = true;
+    sim = true;
+    shade = false;
+    newLife();
+    newlife3d();
+    glClearColor(bg_color[0], bg_color[1], bg_color[2], bg_color[3]);
+  }
+
+  ImGui::End();
+}
+
+/*void DisplayImGui() {*/
+/*  ImGui::Begin("My Window");*/
+/*  ImGui::Text("Hello World");*/
+/*  ImGui::End();*/
+/*}*/
 
 void MouseGL(int button, int state, int x, int y) {
 
@@ -325,13 +467,16 @@ void render() {
   float x_t = 0.0f;
   float off = 500 / (float)size * 0.01f;
 
-  // glScalef(1.0f+scal, 1.0f+scal, 1.0f+scal);
   glTranslatef(-5.0f + x_offset, -5.0f + y_offset, -9.0f + scal);
-  // glTranslatef(-0.5f, -0.5f, 0.0f);
-  if (shade == false)
-    glColor3f((169.0f / 255.0f), (234.0f / 255.0f), (123.0f / 255.0f));
-  // GLfloat cyan[] = { (169.0f / 255.0f), (234.0f / 255.0f), (123.0f /
-  // 255.0f), 1.f }; glMaterialfv(GL_FRONT, GL_DIFFUSE, cyan);
+
+  if (shade == false) {
+
+    // glColor3f((169.0f / 255.0f), (234.0f / 255.0f), (123.0f / 255.0f));
+
+    GLfloat cyan[] = {(169.0f / 255.0f), (234.0f / 255.0f), (123.0f / 255.0f),
+                      1.f};
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, cyan);
+  }
   glBegin(GL_QUADS);
   for (int i = 0; i < size; i++) {
     x_t = 0.0f;

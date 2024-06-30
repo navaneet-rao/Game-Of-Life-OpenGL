@@ -3,6 +3,7 @@
 
 #include <ctime>
 
+#include <GL/gl.h>
 #include <GL/glut.h>
 
 #include "imgui.h"
@@ -28,6 +29,8 @@ void KeyboardGL(unsigned char c, int x, int y);
 void ReshapeGL(int w, int h);
 void MouseGL(int button, int state, int x, int y);
 void MouseMotionGL(int x, int y);
+
+void DisplayImGui();
 
 void render();
 void render3d();
