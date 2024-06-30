@@ -59,7 +59,17 @@ void GLScene(int x, int y, int argc, char *argv[]) {
   glutMotionFunc(MouseMotionGL); // Register the mouse motion function
   glutReshapeFunc(ReshapeGL);
 
-  glClearColor(0.156f, 0.172f, 0.203f, 1.00f);
+  IMGUI_CHECKVERSION();
+  ImGui::CreateContext();
+  ImGuiIO &io = ImGui::GetIO();
+  (void)io;
+
+  ImGui::StyleColorsDark();
+  ImGui_ImplOpenGL3_Init();
+  ImGui_ImplGLUT_Init();
+
+  glClearColor(0.156f, 0.172f, 0.203f, 1.00f); // BackGround Colour
+  // glClearColor(1.00f, 1.00f, 1.00f, 1.00f);
   glClearDepth(1.0f);
   glShadeModel(GL_SMOOTH);
 }
@@ -67,6 +77,11 @@ void GLScene(int x, int y, int argc, char *argv[]) {
 void Cleanup() {
 
   if (g_GLUTWindowHandle != 0) {
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGLUT_Shutdown();
+    ImGui::DestroyContext();
+
     glutDestroyWindow(g_GLUTWindowHandle);
     g_GLUTWindowHandle = 0;
   }
@@ -101,6 +116,13 @@ void newlife3d() {
 void DisplayGL() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+  ImGuiIO &io = ImGui::GetIO();
+  io.DisplaySize = ImVec2((float)window_width, (float)window_height);
+
+  ImGui_ImplOpenGL3_NewFrame();
+  ImGui_ImplGLUT_NewFrame();
+  ImGui::NewFrame();
+
   // Render your scene
   if (g_current == scene1) {
     render();
@@ -108,13 +130,22 @@ void DisplayGL() {
     render3d();
   }
 
+  ImGui::Begin("My Window");
+  ImGui::Text("Hello World");
+  ImGui::End();
+
+  ImGui::Render();
+  ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
   glutSwapBuffers();
   glutPostRedisplay();
 }
 
 void MouseGL(int button, int state, int x, int y) {
 
-  if (button == GLUT_LEFT_BUTTON) {
+  ImGui_ImplGLUT_MouseFunc(button, state, x, y);
+
+  if (button == GLUT_RIGHT_BUTTON) {
     if (state == GLUT_DOWN) {
       last_mouse_x = x;
       last_mouse_y = y;
@@ -133,6 +164,8 @@ void MouseGL(int button, int state, int x, int y) {
 
 void MouseMotionGL(int x, int y) {
 
+  ImGui_ImplGLUT_MotionFunc(x, y);
+
   if (is_dragging) {
     int dx = x - last_mouse_x;
     int dy = y - last_mouse_y;
@@ -145,6 +178,8 @@ void MouseMotionGL(int x, int y) {
 }
 
 void KeyboardGL(unsigned char c, int x, int y) {
+
+  ImGui_ImplGLUT_KeyboardFunc(c, x, y);
 
   if (c == ' ') {
     sim = !sim;
@@ -275,6 +310,9 @@ void ReshapeGL(int w, int h) {
   glLoadIdentity();
   gluPerspective(60.0, (GLdouble)window_width / (GLdouble)window_height, 0.1,
                  100.0);
+
+  ImGuiIO &io = ImGui::GetIO();
+  io.DisplaySize = ImVec2((float)window_width, (float)window_height);
 
   // render();
   glutPostRedisplay();

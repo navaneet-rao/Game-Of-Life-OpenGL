@@ -5,6 +5,10 @@
 
 #include <GL/glut.h>
 
+#include "imgui.h"
+#include "imgui_impl_glut.h"
+#include "imgui_impl_opengl3.h"
+
 using namespace life3;
 
 #ifndef GLSCENE_H

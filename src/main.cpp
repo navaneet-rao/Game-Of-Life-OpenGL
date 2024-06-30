@@ -1,20 +1,19 @@
-#include "World.h"
 #include "Life.h"
+#include "World.h"
 
-#include <iostream>
 #include "time.h"
+#include <iostream>
 
-//#include <stdlib.h>
-//#include <Windows.h>
+// #include <stdlib.h>
+// #include <Windows.h>
 
 #include "GLScene.h"
 
-using std::malloc;
 using std::cout;
 using std::endl;
+using std::malloc;
 
-int main(int argc, char *argv[])
-{
-	GLScene(argc, argv);
-	glutMainLoop();
+int main(int argc, char *argv[]) {
+  GLScene(argc, argv);
+  glutMainLoop();
 }

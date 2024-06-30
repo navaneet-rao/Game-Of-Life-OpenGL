@@ -1,6 +1,7 @@
 src/CMakeFiles/Conway.dir/main.cpp.o: \
  /home/luke/code/Game-Of-Life-OpenGL/src/main.cpp \
  /usr/include/stdc-predef.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/Life.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/World.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -146,11 +147,16 @@ src/CMakeFiles/Conway.dir/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/luke/code/Game-Of-Life-OpenGL/include/Life.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/GLScene.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/Life3d.h \
  /home/luke/code/Game-Of-Life-OpenGL/include/World3d.h \
  /usr/include/c++/11/ctime /usr/include/GL/glut.h \
  /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
- /usr/include/GL/glu.h /usr/include/c++/11/stdlib.h
+ /usr/include/GL/glu.h /usr/include/c++/11/stdlib.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/imgui.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/imconfig.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/assert.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/imgui_impl_glut.h \
+ /home/luke/code/Game-Of-Life-OpenGL/include/imgui_impl_opengl3.h
