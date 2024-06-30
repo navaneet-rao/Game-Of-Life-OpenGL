@@ -1,6 +1,4 @@
 #include "GLScene.h"
-#include "imgui.h"
-#include "imgui_impl_glut.h" // This header is provided by ImGui for GLUT integration
 
 int size = 500;
 
@@ -55,11 +53,6 @@ void GLScene(int x, int y, int argc, char *argv[]) {
   g_GLUTWindowHandle = glutCreateWindow("Conway's Game of Life");
   glutInitWindowSize(window_width, window_height);
 
-  // Initialize ImGui
-  ImGui::CreateContext();
-  ImGui_ImplGLUT_Init();    // Initialize ImGui for GLUT
-  ImGui::StyleColorsDark(); // Optional: Set a default ImGui style
-
   glutDisplayFunc(DisplayGL);
   glutKeyboardFunc(KeyboardGL);
   glutMouseFunc(MouseGL);        // Register the mouse function
@@ -72,9 +65,6 @@ void GLScene(int x, int y, int argc, char *argv[]) {
 }
 
 void Cleanup() {
-
-  ImGui_ImplGLUT_Shutdown();
-  ImGui::DestroyContext();
 
   if (g_GLUTWindowHandle != 0) {
     glutDestroyWindow(g_GLUTWindowHandle);
@@ -111,21 +101,6 @@ void newlife3d() {
 void DisplayGL() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  // Start ImGui frame
-  ImGui_ImplGLUT_NewFrame();
-  ImGui::NewFrame();
-
-  // ImGui menu creation (example)
-  ImGui::Begin("Settings");
-
-  if (ImGui::Button("Toggle Simulation (Space)")) {
-    sim = !sim;
-  }
-
-  // Add more ImGui widgets/buttons for other controls as needed
-
-  ImGui::End();
-
   // Render your scene
   if (g_current == scene1) {
     render();
@@ -133,18 +108,11 @@ void DisplayGL() {
     render3d();
   }
 
-  // Render ImGui
-  ImGui::Render();
-  ImGui_ImplGLUT_RenderDrawData(ImGui::GetDrawData());
-
   glutSwapBuffers();
   glutPostRedisplay();
 }
 
 void MouseGL(int button, int state, int x, int y) {
-
-  // Handle ImGui mouse input
-  ImGui_ImplGLUT_MouseFunc(button, state, x, y);
 
   if (button == GLUT_LEFT_BUTTON) {
     if (state == GLUT_DOWN) {
@@ -165,9 +133,6 @@ void MouseGL(int button, int state, int x, int y) {
 
 void MouseMotionGL(int x, int y) {
 
-  // Handle ImGui mouse motion input
-  ImGui_ImplGLUT_MotionFunc(x, y);
-
   if (is_dragging) {
     int dx = x - last_mouse_x;
     int dy = y - last_mouse_y;
@@ -180,9 +145,6 @@ void MouseMotionGL(int x, int y) {
 }
 
 void KeyboardGL(unsigned char c, int x, int y) {
-
-  // Handle ImGui input first
-  ImGui_ImplGLUT_KeyboardFunc(c, x, y);
 
   if (c == ' ') {
     sim = !sim;
